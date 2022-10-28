@@ -35,12 +35,16 @@ Backend Environment
 
   If you choose to don't use docker enviroment, please ignore the Step 3. Configure your MySQL credentials on `.env` and you should be able to make the service up with `php artisan serve`.
   **NOTE**: Running the application on localhost:8000, you will need to change `frontend/.env` variable `REACT_APP_BACKEND_URL` with the right url.
+  
+  4. Run migrations
 
-  4. Make sure everything is working fine
+         `./vendor/bin/sail artisan migrate` or locally `php artisan migrate`
+
+  5. Make sure everything is working fine
 
          `./vendor/bin/sail test` or locally `php artisan test`
 
-  If any test got fail, check if your enviroment is fine, and try to figure out what is happening.   
+  If any test got fail, check if your enviroment is fine, and try to figure out what is happening.
   Laravel debugging is great, so you'll can fix it soon as possible!
 
   Frontend Environment
